@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MySite</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">MySite</div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="grid-container">
+        <!-- Contact Form -->
+      <section class="item">
+        <form autocomplete="off" class="form">
+          <h2 id="heading">Contact Form</h2>
+          <div class="form-control">
+            <label for="name">Name</label>
+            <br />
+            <input type="text " id="name" placeholder="Enter Name" />
+            <span id="name-error"></span>
+          </div>
+          <br />
+          <div class="form-control">
+            <label for="email">Email</label>
+            <br />
+            <input type="email" id="email" placeholder="Enter Email" />
+            <span id="email-error"></span>
+          </div>
+          <br />
+          <div class="form-control">
+            <label for="textarea">Message</label>
+            <br />
+            <textarea id="message"></textarea>
+            <span id="message-error"></span>
+          </div>
+
+          <div class="form-control">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- TODO List -->
+      <section class="item">
+        <div class="todo-container">
+          <div class="todo-input-container">
+            <h2>To Do List</h2>
+            <input
+              type="text"
+              id="todo-input-box"
+              placeholder="Add a new todo..."
+            />
+            <input type="button" id="todo-addBtn" value="Add" />
+          </div>
+          <ul class="todo-list" id="todo-list"></ul>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

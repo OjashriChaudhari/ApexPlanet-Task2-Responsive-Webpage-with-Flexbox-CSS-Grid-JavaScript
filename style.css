@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: -webkit-linear-gradient(to right, #e1eec3, #f05053); 
+    background: linear-gradient(to right, #e1eec3, #f05053);
+}
+
+/* for navigation bar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: -webkit-linear-gradient(to right, #642b73, #c6426e); 
+    background: linear-gradient(to right, #642b73, #c6426e); /
+}
+
+.logo{
+    color: white;
+    font-weight: 600;
+    font-size: 28px;
+    padding-left: 35px;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    padding-right: 35px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #e1eec3;
+    font-weight: 600;
+}
+
+.nav-links a:hover{
+    opacity: 0.75;
+    color: yellow;
+}
+
+
+
+/* for css grid */
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+form{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.item{
+    padding: 30px 50px 50px 50px;
+    margin: 50px;
+    border: solid 1px black;
+    background:#fff;         
+    border-radius: 20px;                                                                                            
+}
+
+#heading{
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.form-control label{
+    color: #000;
+    font-weight: 500;
+}
+.form-control input{
+    width: 100%;
+    padding: 10px 10px 10px 10px ;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+.form-control textarea{
+    width: 100%;
+    padding: 10px 10px 20px 10px ;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-control button{
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(19, 139, 236);
+    font-size: larger;
+    font-weight: 500;
+    cursor: pointer
+}
+.form-control button:hover{
+    background-color: rgb(52, 151, 231);
+}
+
+form span{
+    color: red;
+}
+
+/* for todo list */
+.todo-input-container h2{
+    padding-bottom: 20px;
+    text-align: center;
+}
+.todo-input-container input{
+    height: 48px;
+    width: 100%;
+    border: solid 1px black;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.todo-input-container input[type= 'text']{
+    border-radius: 23px;
+}
+.todo-input-container input[type= 'button']{
+    position: absolute;
+    right: 7.5%;
+    width: 7%;
+    border: none;
+    border-radius: 23px;
+    background-color: #3da33d;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0 12px;
+}
+.todo-input-container input[type= 'button']:hover{
+    background-color: #60b160;
+    transition: padding 0.5s;
+}
+.todo-container ul li{
+    margin-top: 20px;
+    list-style-type: none;
+    cursor: pointer;
+    border: 1px solid #a19f9f;
+    border-radius: 23px;
+    padding: 6px 12px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.5s;
+}
+.todo-container ul li:hover{
+    background-color: #cbcaca ;
+}
+.todo-container ul li p{
+    flex-grow: 1;
+    padding: 2px;
+}
+.btn{
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: none;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 5px;
+}
+.deletebtn{
+    color: #ff0000;
+}
+.editbtn{
+    color: #008000;
+}
+.deletebtn:hover{
+    color: #ff0000a1;
+}
+.editbtn:hover{
+    color: #008000a2;
+}
+
+
+
+@media(max-width: 768px){
+    .grid-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .todo-input-container input[type="button"]{
+        position: absolute;
+        right: 13%;
+        width: 17%;
+    }
+}
+
+@media (max-width: 480px){
+    nav{
+        flex-direction: column;
+    }
+    .nav-links{
+        padding-top: 10px;
+    }
+    .grid-container{
+        grid-template-columns: 1fr;
+    }
+    .todo-input-container input[type="button"]{
+        position: absolute;
+        right: 21%;
+        width: 17%;
+    }
+    .btn{
+        font-size: 12px;
+    }
+}
